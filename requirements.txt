@@ -1,2 +1,4 @@
 streamlit
+tokenizers
 transformers
+SentencePiece
