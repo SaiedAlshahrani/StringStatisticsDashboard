@@ -2,7 +2,8 @@ from transformers import AutoTokenizer
 
 def count_string_tokens(text):
     tokenizer = AutoTokenizer.from_pretrained("humain-ai/ALLaM-7B-Instruct-preview")
-    tokens = tokenizer.tokenize(text, use_fast=False)
+    # tokens = tokenizer.tokenize(text, use_fast=False)
+    tokens = tokenizer(text, add_special_tokens=False)["input_ids"]
     num_tokens = len(tokens)
     return num_tokens
 
